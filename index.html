@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Food Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="authContainer">
+        <h1 id="authTitle">Login</h1>
+        
+        <div class="card">
+            <form id="authForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div> 
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" id="authButton">Login</button>
+            </form>
+            <p id="toggleAuth">
+                Don't have an account? <a href="#" id="switchToSignup">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="container" id="trackerContainer" style="display: none;">
+        <h1>Daily Food Tracker</h1>
+        
+        <div class="card">
+            <form id="foodForm">
+                <div class="form-group">
+                    <label for="foodName">Food Name</label>
+                    <input type="text" id="foodName" required>
+                </div>
+                <div class="form-group">
+                    <label for="calories">Calories</label>
+                    <input type="number" id="calories" required>
+                </div>
+                <div class="form-group">
+                    <label for="protein">Protein (g)</label>
+                    <input type="number" id="protein" required>
+                </div>
+                <div class="form-group">
+                    <label for="carbs">Carbs (g)</label>
+                    <input type="number" id="carbs" required>
+                </div>
+                <div class="form-group">
+                    <label for="fats">Fats (g)</label>
+                    <input type="number" id="fats" required>
+                </div>
+                <div class="form-group">
+                    <label for="foodImage">Food Image</label>
+                    <input type="file" id="foodImage" accept="image/*">
+                </div>
+                
+                <button type="submit">Add Food</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Today's Summary</h2>
+            <div class="summary">
+                <div class="summary-item">
+                    <h3>Calories</h3>
+                    <p id="totalCalories">0</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Protein</h3>
+                    <p id="totalProtein">0g</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Carbs</h3>
+                    <p id="totalCarbs">0g</p>
+                </div>
+                <div class="summary-item">
+                    <h3>Fats</h3>
+                    <p id="totalFats">0g</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Today's Food Log</h2>
+            <div id="foodList" class="food-list">
+                <!-- Food items will be added here -->
+            </div>
+        </div>
+        <button id="logoutButton" style="background-color: #e74c3c;">Logout</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
